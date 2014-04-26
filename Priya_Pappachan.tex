@@ -1,0 +1,159 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Priya Pappachan
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+  
+   
+    \textsc{Phone:}     & +91 94 96 34 67 54\\
+    \textsc{email:}     & \href{mailto:priyapappachan010@gmail.com}{priyapappachan010@gmail.com}\\
+     \textsc{blog:}     & \href{http://priyapappachan.wordpress.com}{http://priyapappachan.wordpress.com}\\
+     \textsc{Source Code Repo:}  & \href{https://github.com/priyapappachan}{https://github.com/priyapappachan}\\
+    
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & Bachelor of Technology in Computer Science and Engineering 
+Govt.  \hspace{40 mm} Engineering College, Thrissur, Kerala \\\textsc{2010-2014}&\textsc{CGPA 8.3/10}\\&\emph{University of Calicut}\\\multicolumn{2}{c}{} \\
+ \textsc{2010} & 12\textsuperscript{th} Plus Two, Sacred Heart Convent Girls Higher Secondary School, Thrissur\\&\emph{97\%}\\&\emph{State Syllabus}\\\multicolumn{2}{c}{} \\
+  \textsc{2008} & 10\textsuperscript{th}St.Paul's Convent Girls Higher Secondary School,\hspace{40 mm} Kuriachira, Thrissur\\&\textsc{95\%}\\&\emph{State Syllabus}\\\multicolumn{2}{c}{} \\
+
+\end{tabular}
+
+\section{Technical Skills}
+\begin{tabular}{r p{11cm} }
+
+Languages \& \textsc{api}s: & C, Java, Python, Django, Bash Scripting, \\
+&
+Android framework APIs, SQLite.\\
+Microprocessor: & mSP430 microcontroller\\
+Authoring \& Graphics: &  {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}, Open Office \\
+Source Code Management Systems: & Git\\
+Editor:& Eclipse, Vim, Gedit\\
+Platforms: & GNU/Linux, Windows
+\end{tabular}
+
+\section{Projects}
+\begin{tabular}{r p{11cm} }
+
+Mini Project: & Event Notifier for Android\\
+Description: & We developed an Event Notification application for Android Framework using Android SDK(Software Development Kit) and the backend using Django web framework. Event Notifier is a social network which allows users to create and notify others about various events at college.\\
+Languages:& Python, Java\\
+API: & Android Framework APIs, Django\\
+Source Code : & https://github.com/priyapappachan/eventnotifier
+\end{tabular}
+
+\begin{tabular}{r p{11cm} }
+
+Main Project: & Cross Domain Recommendation System\\
+Description: & Traditional Recommender systems learn about a user and their preferences and turns it into predictions of possible likes and interests. A Cross domain recommendation system provides recommendation on a variety of domains based on user preferences in another domain. \\
+Language:& Python\\
+\end{tabular}
+
+\begin{tabular}{r p{11cm} }
+
+Android \\Application: & Voice Controlled Game application\\
+Description: & We developed a maze game for Android with actions controlled by voice. The objective of the game is to reach the finishing point by navigating through a maze.  \\
+Language:& Java\\
+API: & Android Framework APIs 
+
+\end{tabular}
+
+\section{Industrial Training}
+\begin{itemize}
+\item Participated in the Industrial Interface programme conducted by TCS from June 19th to July 3rd 2012. 
+\item Industrial visit in CYBROSYS Technologies Limited, Kinfra techno industrial park in the year 2011.
+\end{itemize}
+
+
+\section{Extracurricular Activities}
+\begin{itemize}
+\item \textbf{Core Python contributor.} Submitted multiple patches to Python.org.
+\item \textbf{Contributed to Swanthanthra Malayalam Computing (SMC)} Organization in rewriting twitter bot scripts which provide english - malayalam dictionary lookup service. 
+\item \textbf{Project Evaluation head} of Innovation center of GEC Thrissur, 2013 - 14.
+\item \textbf{Joint Convener} of Ideator club, GEC Thrissur.
+\item Participated in E-yantra Robotics competition organized by IIT Bombay.
+\item Active member of Free Software User’s Group Thrissur. Organized classes on shell scripting for juniors.
+\item Completed an online course on MSP430 microcontroller.
+\item Organized technical and informal events for the techfest in GEC Thrissur, Dyuthi – 2012 and 2013.
+\item Organized a technical workshop on Creative innovation for new Product development under the ideator club, GEC Thrissur.
+\item Organized a technical workshop on Microcontrollers for juniors under the ideator club, GEC Thrissur
+\item Attended BlackBerry Application Development workshop.
+\end{itemize}
+
+\end{document}
